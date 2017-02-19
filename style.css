@@ -1,0 +1,117 @@
+body {
+    background-color: #38DF64;
+}
+.popup,.header,.fix,.main,.big,.lef,.rig {padding: 0 0 0 0;}
+.popup {background-color: white;
+margin-bottom: 15px;
+height: 90vh;
+}
+.popup2 { 
+background-color: white;
+padding: 0 0 0 5px;}
+.main {margin-top: 10px;
+ margin-bottom: 50px;      
+background-color: wheat;
+ height: fit-content;
+max-height:730px;
+border-bottom:1px solid white;
+}
+.big {height: 110vh;
+  overflow: hidden;  
+    }  
+img {height: 40px;
+width:40px;
+border-radius: 200px;
+object-fit: cover;}
+.modal-sm {width: 1000px;
+position: absolute;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;}
+.modal-body img {
+    text-align: center;
+    margin-left: 300px;
+ height: 350px;
+width:350px;
+object-fit: cover;
+}
+.modal-footer {
+    padding-left: 390px;
+    text-align: left;
+}
+.modal-title {
+ color:#38DF64;
+font-weight: bolder;
+text-align: center;
+font-size: 35px;
+}
+.lef,.rig {height: 45px;
+}
+.rig:hover {
+    background-color:ghostwhite;
+}
+
+.header {height: 60px;
+background-color:#7C9081;
+color:white;
+padding: 10px;}
+.header2 {height: 30px;
+background-color:#64DF85;}
+.help {height: 45px;
+       background-color: #38DF64;
+       padding: 5px 20px 0 0;
+       font-size: 30px;
+border-bottom:1px solid white;}
+.help label{float: right;
+color:white;}
+.help label:hover{color:yellow;}
+hr {border-top: 1px solid #38DF64;}
+.tel, .mail {color:#38DF64;
+font-weight: bolder;}
+.proff,.mob {color:#38DF64;}
+.mob {margin-left: 10px;
+font-weight: bolder;}
+.checked-selector {display: none;}
+#toggle-hidden:checked ~ .checked-selector {display: block;
+position: absolute;
+    opacity: 1;
+    right: 0px;
+    background: lavender; 
+    color: #000; 
+    width: 300px; 
+    height: 80vh;
+    padding: 10px 15px 10px 15px;
+    text-align: left; 
+   transform: translateX(100px);
+        opacity: 0;
+  animation: show 0.2s ease-in-out forwards;}
+@keyframes show {
+  to { transform: translateX(0px);
+       opacity:1;
+  }}
+input.hidden {position: absolute;left: -999em;}
+
+.checked-selector2 {display: none;}
+#toggle-hidden2:checked ~ .checked-selector2 {display: block;
+position: absolute;
+    opacity: 1;
+    right: 0px;
+    background: lavender; 
+    color: #000; 
+    width: 100%; 
+    height: 90vh;
+    padding: 10px 15px 10px 15px;
+    text-align: left; 
+   transform: translateX(-300px);
+        opacity: 0;
+  animation: show2 0.2s ease-in-out forwards;}
+@keyframes show2 {
+  to { transform: translateX(0px);
+       opacity:1;
+  }}
+input.hidden2 {position: absolute;left: -999em;}
+@media only screen and (max-device-width: 700px) {
+.popup,.checked-selector,.checked-selector2 {
+max-height:620px;} 
+}
