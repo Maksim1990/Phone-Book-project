@@ -2,26 +2,24 @@
 <html>
 <head>
 <title>Popup Task</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 <link href="/public/css/font-awesome.min.css" rel="stylesheet">
 <link href="style.css" rel="stylesheet">
 </head>
 <body>
     
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1 main">
-        <div class="col-sm-12 help">
+    <div class="grid main">
+        <div class=" help">
             <label for="toggle-hidden"><i class="fa fa-info-circle" aria-hidden="true"></i></label>
         </div>
-        <div class="col-sm-12 fix">
-            <div class="col-sm-3 header">
+        <div class=" fix">
+            <div class="col-3-12 header">
   Contact book with name, phone & profession details.              
             </div>
-         <div class="col-sm-9 header2"></div> 
+         <div class=" header2"></div> 
         </div>
-        <div class="col-sm-3 popup" style="overflow-y: scroll;">        
-        <div class="col-xs-12 col-sm-12 popup2"  >
+        <div class="col-3-12 popup" style="overflow-y: scroll;">        
+        <div class=" popup2 grid"  >
      
 <?php
 
@@ -55,34 +53,12 @@ $array=array
 for ($i=0;$i<count($array);$i++){
 ?>
             <div class="line" >
-          <div class="col-xs-2 col-sm-2 lef">
-      <a data-toggle="modal" data-target="#myModal-<?= $array[$i][0]; ?>">        
-          <img src="<?= $array[$i][1]; ?>" /></a></div>
-     <div class="modal fade" id="myModal-<?= $array[$i][0]; ?>" role="dialog">
-    <div class="modal-dialog modal-sm">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title"><?= $array[$i][0]; ?> <?= $array[$i][5]; ?></h4>
-        </div>
-        <div class="modal-body">
-            
-        <img src="<?= $array[$i][1]; ?>" />
-       
-        </div>
-        <div class="modal-footer">
-     Name:<span class="mob"> <?= $array[$i][0]; ?></span> <br/> 
-       Second Name: <span class="mob"><?= $array[$i][5]; ?></span><br/>
-       Date of Birth:<span class="mob"> <?= $array[$i][4]; ?></span> <br/> 
-       Mobile Phone:<span class="mob"> <?= $array[$i][3]; ?></span><br/>
-       Profession:<span class="mob"> <?= $array[$i][2]; ?></span>
-        </div>
-      </div>
-    </div>
-  </div>     
-          <div class="col-xs-12 col-sm-10 rig"><?= $array[$i][0]; ?><span class="mob"><?= $array[$i][3]; ?></span><br/>
+          <div class="col-3-12 lef">
+              
+          <img src="<?= $array[$i][1]; ?>" /></div>    
+          <div class=" rig"><?= $array[$i][0]; ?><span class="mob"><?= $array[$i][3]; ?></span><br/>
               <span class="proff"><?= $array[$i][2]; ?></span>
-              <label for="toggle-hidden2"><i class="fa fa-info-circle" aria-hidden="true"></i></label>   
+           
           </div>               
 </div>
            
@@ -91,7 +67,7 @@ for ($i=0;$i<count($array);$i++){
     </div>
    
         </div>
-        <div class="col-sm-9 big">
+        <div class="col-9-12 big">
 
 <input type="checkbox" id="toggle-hidden" class="hidden" />
 <div class="checked-selector">
@@ -99,11 +75,7 @@ for ($i=0;$i<count($array);$i++){
     <p>For support please call following number <br/><br/><span class="tel">+123 (45) 6789567</span><br/><br/> or send 
         your queries to: <br/><br/><span class="mail">info@support.com</span></p>
 </div>      
-     <input type="checkbox" id="toggle-hidden2" class="hidden2" />
-<div class="checked-selector2">
-    <h2>Personal information</h2><hr>
-    <p>Place for personal details & information</p>    
-</div>             
+         
        </div>    
 </div>    
 </body>
